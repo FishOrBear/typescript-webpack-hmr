@@ -2,5 +2,5 @@
 
 export function CliclEvent()
 {
-    console.log("111");
+    this.innerHTML = "test change value";
 }
