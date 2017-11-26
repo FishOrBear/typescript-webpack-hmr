@@ -12,6 +12,10 @@ module.exports = {
         test: /\.ts$/,
         exclude: path.resolve(__dirname, "node_modules"),
         loader: "awesome-typescript-loader"
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
       }
     ],
   },

@@ -1,4 +1,6 @@
 
+import "./style.css";
+
 let btn = document.createElement("button");
 btn.innerHTML = "click me"
 document.body.appendChild(btn);
