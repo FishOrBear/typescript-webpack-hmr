@@ -42,9 +42,9 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     //
-    new HtmlWebpackPlugin({ title: "test cx hmr" }),//template: 'index.html'
+    new HtmlWebpackPlugin({ template: 'index.html' }),
     //webpack-dev-server hmr
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(),//
+    new webpack.NamedModulesPlugin(),//change file console.log show name.
   ]
 };
