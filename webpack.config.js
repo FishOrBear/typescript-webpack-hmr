@@ -40,7 +40,7 @@ module.exports = {
   },
   //
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['dist']),//Optional
     //
     new HtmlWebpackPlugin({ template: 'index.html' }),
     //webpack-dev-server hmr
