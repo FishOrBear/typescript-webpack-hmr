@@ -2,7 +2,7 @@
   "name": "webpack-hmr",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",
+  "main": "src/index.ts",
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack"
