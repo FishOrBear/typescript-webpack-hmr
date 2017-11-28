@@ -14,7 +14,7 @@ package.json uses `"dev": "webpack-dev-server"`
 
 2. Run `npm run dev` to get started. Press f5 to start debugging.
 
-3. Modify `print.ts` and save, the browser will not refresh the page, and the function has been updated.
+3. Modify `HotCompent.tsx` and save, the browser will not refresh the page, and the function has been updated.
 
 
 # 使用webpack-dev-server + typescript 进行热更新.
