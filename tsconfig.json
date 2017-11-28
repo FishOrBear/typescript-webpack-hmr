@@ -6,12 +6,13 @@
         "moduleResolution": "node",
         "target": "es6",
         "noLib": false,
-        "allowJs": false
+        "allowJs": false,
+        "jsx": "react"
     },
-    "files": [
-        "./src/index.ts"
-    ],
     "exclude": [
         "node_modules"
+    ],
+    "include": [
+        "./src/**/*"
     ]
 }

@@ -5,13 +5,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');//Optional
 
 module.exports = {
-  entry: "./src/index.ts",
+  entry: [
+    'react-hot-loader/patch',
+    "./src/index.tsx"
+  ],
   module: {
     loaders: [
       {
-        test: /\.ts$/,
+        test: /\.tsx?$/,
         exclude: path.resolve(__dirname, "node_modules"),
-        loader: "awesome-typescript-loader"
+        loaders: ['react-hot-loader/webpack', 'awesome-typescript-loader']
       },
       {
         test: /\.css$/,
@@ -25,7 +28,7 @@ module.exports = {
       path.resolve(__dirname, "src"),
       "node_modules"
     ],
-    extensions: ['.ts', '.js'],
+    extensions: [".ts", ".tsx", ".js", "json"]
   },
   output: {
     path: path.join(__dirname, "dist"),
@@ -39,6 +42,8 @@ module.exports = {
   devtool: "source-map",
   devServer: {
     contentBase: path.join(__dirname, "dist"),
+    historyApiFallback: true,
+    // respond to 404s with index.html
     port: 8888,
     hot: true
   },
