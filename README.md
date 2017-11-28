@@ -23,4 +23,4 @@ package.json uses `"dev": "webpack-dev-server"`
 
 2. 运行 `npm run dev` 开始运行. 按f5开始调试.
 
-3. 修改 `print.ts` 并保存,浏览器不会刷新页面,并且函数已经得到更新.
+3. 修改 `HotCompent.tsx` 并保存,浏览器不会刷新页面,并且函数已经得到更新.
