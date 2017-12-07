@@ -1,27 +1,11 @@
 
 import "./style.css";
+import Worker = require("worker-loader!./worker");
 
-let btn = document.createElement("button");
-btn.innerHTML = "click me"
-document.body.appendChild(btn);
 
-let oldClickEvent;
-//update hot module
-let RegEvent = async () =>
-{
-    if (oldClickEvent)
-        btn.removeEventListener("click", oldClickEvent);
-    let clickEvent = (await import("./print")).CliclEvent;
-    btn.addEventListener("click", clickEvent);
-    oldClickEvent = clickEvent;
-}
+let worker = new Worker();
 
-RegEvent();
+worker.postMessage('1111')
 
-if (module.hot)
-{
-    module.hot.accept('./print', async function ()
-    {
-        RegEvent();
-    })
-}
+worker.addEventListener('message', (event) => { console.log(event.data); });
+window["w"] = worker;
