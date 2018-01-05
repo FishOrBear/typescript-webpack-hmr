@@ -23,11 +23,11 @@ module.exports = {
     ],
   },
   resolve: {
-    modules: [
-      __dirname,
-      path.resolve(__dirname, "src"),
-      "node_modules"
-    ],
+    // modules: [
+    //   __dirname,
+    //   path.resolve(__dirname, "src"),
+    //   "node_modules"
+    // ],
     extensions: [".ts", ".tsx", ".js", "json"]
   },
   output: {
